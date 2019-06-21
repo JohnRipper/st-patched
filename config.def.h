@@ -4,9 +4,8 @@
  * appearance
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
- * Standard aviation grade front https://github.com/polarsys/b612 
  */
-static char *font = "B612 Mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -26,7 +25,7 @@ char *vtiden = "\033[?6c";
 
 /* Kerning / character bounding-box multipliers */
 static float cwscale = 1.0;
-static float chscale = 1.1;
+static float chscale = 1.0;
 
 /*
  * word delimiter string
@@ -95,27 +94,26 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 
-/* Modified CandyPaper https://github.com/dfxyz/CandyPaper.mintty */
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
 	"black",
-	"#CC6666",
-	"#59B359",
-	"#B3B359",
-	"#6699CC",
-	"#AD8FCC",
-	"#59B3B3",
-	"#999999",
+	"red3",
+	"green3",
+	"yellow3",
+	"blue2",
+	"magenta3",
+	"cyan3",
+	"gray90",
 
 	/* 8 bright colors */
-	"#4D4D4D",
-	"#C97979",
-	"#83D783",
-	"#B38659",
-	"#7EA6CF",
-	"#CC8FAD",
-	"#59B3B3",
+	"gray50",
+	"red",
+	"green",
+	"yellow",
+	"#5c5cff",
+	"magenta",
+	"cyan",
 	"white",
 
 	[255] = 0,
@@ -123,8 +121,6 @@ static const char *colorname[] = {
 	/* more colors can be added after 255 to use with DefaultXX */
 	"#cccccc",
 	"#555555",
-	"#F1F1F1",
-	"#1F1B1B",
 };
 
 
@@ -132,8 +128,8 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 258;
-unsigned int defaultbg = 259;
+unsigned int defaultfg = 7;
+unsigned int defaultbg = 0;
 static unsigned int defaultcs = 256;
 static unsigned int defaultrcs = 257;
 
